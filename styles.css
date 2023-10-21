@@ -68,12 +68,15 @@ input {
     grid-template: 1fr / repeat(3, auto);
     column-gap: 20px;
     justify-content: end;
+    align-self: end;
 }
 .project-card {
     background: white;
     border-left: 6px solid #00ADB5;
     border-radius: 6px;
     padding: 1em;
+    display: grid;
+    grid-template: 1fr 1fr 1f / 1fr;
 }
 
 .trending-card {

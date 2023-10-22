@@ -11,7 +11,7 @@ body {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template: 130px 1fr / 250px 1fr;
+    grid-template: 160px 1fr / 250px 1fr;
 }
 
 .sidebar {
@@ -46,18 +46,43 @@ body {
     background: #393E46;
     grid-column: 2;
     display: grid;
-    grid-template: 1fr 1fr / repeat(6, 1fr);
+    grid-template-columns: 2fr 1fr;
+    padding: 8px 32px;
+    gap: 20px 30px;
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.header > div {
+    display: grid;
+    grid-template: 1fr / auto 1fr 1fr;
+    align-items: center;
+    gap: 16px;
+}
+.header div.top-right {
+    grid-template-columns: 1fr 50px 1fr;
+    gap: 20px;
+}
+.header div.top-right > span:first-child {
+    justify-self: end;
 }
 input {
     appearance: none;
-    grid-column: 2 / span 2;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0px 8px;
     height: 30px;
+    border-radius: 25px;
+    background-color: #EEEEEE;
+    border: 1px solid #393E46;
 }
-.greeting {
-    grid-column: 2 / 4;
+input:focus {
+    outline: 2px solid #00ADB5;
+}
+input, .greeting {
+    grid-column: 2 / span 2;
+}
+.greeting > div + div {
+    font-size: 1.2em;
 }
 
 .main {
@@ -114,13 +139,15 @@ button {
     border-radius: 25px;
     background-color: #00ADB5;
     cursor: pointer;
-    place-self: center;
-    padding: 0.5em;
-    width: 120px;
+    padding: 8px 4px;
+    width: 110px;
     font-family: inherit;
     color: white;
     font-size: 1em;
     border: none;
+}
+button:hover {
+    background-color: #028d94;
 }
 
 span[data-name="dashboard"] {
@@ -137,6 +164,7 @@ span[data-name="dashboard"] {
 
 .material-icons {
     color: #d1d5db;
+    cursor: pointer;
 }
 
 .navigation-top .material-icons, .navigation-bottom .material-icons {

@@ -118,7 +118,7 @@ input, .greeting {
 
 .trending-card {
     background-color: white;
-    padding: 1rem;
+    padding: 22px;
     display: grid;
     grid-template: repeat(4, 1fr) / 1fr;
     gap: 20px;
@@ -179,6 +179,13 @@ span[data-name="dashboard"] {
 .announcements-card {
     background-color: white;
     padding: 1rem;
+}
+.content {
+    display: grid;
+    grid-template: 20px 1fr / 1fr;
+}
+.content:not(:last-child){
+    border-bottom: 2px solid #EEEEEE;
 }
 
 .avatar {

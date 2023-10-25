@@ -65,6 +65,9 @@ body {
 .header div.top-right > span:first-child {
     justify-self: end;
 }
+.header div.buttons {
+    grid-template: 1fr / repeat(3, 1fr);
+}
 input {
     appearance: none;
     width: 100%;
